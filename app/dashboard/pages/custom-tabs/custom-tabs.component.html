@@ -1,0 +1,12 @@
+
+  <ul class="nav nav-tabs " role="tablist">
+      <li *ngFor="let tab of tabname; let first = first;" [ngClass]="{firstItem: first}" role="presentation" class="accounts_li px-3 py-2 text-info " [class.active]="selectedtab===tab">
+        <a (click)="selectedtab = tab" aria-controls="one" role="tab" data-toggle="tab">{{tab}}</a>
+      </li>
+    </ul>
+
+  <div class="tab-content p-3">
+    <div *ngIf="selectedtab === tabname[0]" role="tabpanel" class="tab-pane active" id="one">Hello Tab 1 content</div>
+    <div *ngIf="selectedtab === tabname[1]" role="tabpanel" class="tab-pane active" id="two">Hello Tab 2 content</div>
+    <div *ngIf="selectedtab === tabname[2]" role="tabpanel" class="tab-pane active" id="two">Hello Tab 3 content</div>
+  </div>

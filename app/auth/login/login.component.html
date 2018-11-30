@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-4">
+       
+    </div>
+    
+    <div class="col-md-4 ">
+        <div class="mb-3">
+          <h3 class="ml-2">Login</h3>
+        </div>
+        <div>
+          <form #loginform="ngForm" (ngSubmit)="login(loginform)">
+            <div class="pl-2 text-danger" [hidden]="status">{{message}}</div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" placeholder="Enter Your Email" [(ngModel)]="loginData.email" required> 
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="pwd" placeholder="Enter your password" [(ngModel)]="loginData.pwd" required>
+            </div>
+            <!-- <a routerLink = "/home">Home</a> -->
+            <div class="mt-4 mx-auto">
+              <a class="text-primary" routerLink="/forget-pwd">Forgot Password</a> 
+              <input type="submit" value="login" class="btn btn-primary px-3 float-md-right" [disabled]="!loginform.form.valid"> 
+            </div>
+          </form>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+
+    </div>
+  </div>
+</div>

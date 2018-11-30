@@ -1,0 +1,6 @@
+input,div,span:focus{
+    outline: none;
+}
+/* .search:focus{
+    outline: none;
+} */

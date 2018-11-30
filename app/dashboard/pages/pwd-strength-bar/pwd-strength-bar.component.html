@@ -1,0 +1,11 @@
+<h4>Password Strength Bar</h4>
+<div class="mt-4">
+  <form #pwdform="ngForm">
+    <div class="form-group">
+      <input type="password" class="form-control w-50" id="password" name="password" placeholder="Enter password" [(ngModel)]="pwd" required>
+    </div>
+  </form>
+</div>
+<div class="pl-2">
+  <strength-bar [passwordToCheck]="pwd"></strength-bar>
+</div>

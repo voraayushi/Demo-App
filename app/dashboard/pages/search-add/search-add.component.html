@@ -1,0 +1,18 @@
+<div class="mt-4 ml-4">
+  <form #searchform="ngForm">
+    <span>{{message}}</span>
+    <div class="form-group">
+      <label for="search">Search</label>
+      <input type="text" name="search" id="search" [(ngModel)]="search" class="form-control w-25"  (keyup)="checkFruit()">
+      <input *ngIf="status" class="btn btn-primary mt-3 px-3 py-2" type="submit" value="Add" (click)="addFruit()">
+    </div>
+  </form>
+</div>
+<!-- <input type="submit" value="display" class="btn btn-primary mt-5" > -->
+<div class="mt-5">
+  <ul>
+    <li *ngFor="let x of item | filter : search">
+      {{x}} <span class="fa fa-remove pl-3" (click)="remove(x)"></span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+<div id="panel-group pt-4 pl-4">
+  <div class="panel panel-default w-25 mb-3" *ngFor="let item of items; let i=index ">
+    <div class="panel-heading" (click)="current=i">
+        <h5 class="panel-title card-header text-primary">
+        {{item.name}}
+        </h5>
+    </div>
+    <div id="collapse1" class="panel-collapse " [class.collapse]='current != i'>
+        <div class="panel-body card-body text-dark">{{item.desc}}</div>
+    </div>
+  </div>
+
+</div>
